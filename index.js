@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const path = require('path');
 
@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 // Configuration de la connexion à la base de données MySQL
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'snir',
-    password: 'passsnir',
+    user: 'ciel',
+    password: 'ciel',
     database: 'users',
     port: 3306
 });
@@ -50,7 +50,7 @@ connection.query(query, function(err, results) {
         return;
     }
 
-    if (results.length => 0) {
+    if (results.length >= 0) {
         // Authentification réussie
         res.json({ message: 'Authentification réussie' });
     } else {
