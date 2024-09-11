@@ -1,0 +1,1 @@
+This repository is a Docker application for a pedagogical sequence exercise on SQL injections. The application is a simple Node.js server hosting a web authentication page. It will be associated with a MySQL database to be created on the host machine
