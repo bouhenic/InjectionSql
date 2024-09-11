@@ -50,7 +50,7 @@ connection.query(query, function(err, results) {
         return;
     }
 
-    if (results.length >= 0) {
+    if (results.length > 0) {
         // Authentification réussie
         res.json({ message: 'Authentification réussie' });
     } else {
@@ -70,7 +70,7 @@ connection.query(query, function(err, results) {
             return;
         }
 
-        if (results.length === 1) {
+        if (results.length > 0) {
             // Authentification réussie
             res.json({ message: 'Authentification réussie' });
         } else {
