@@ -63,8 +63,8 @@ connection.query(query, function(err, results) {
 //const query = "SELECT * FROM credentials WHERE username = ? AND password = ?";
 
 // Remplace les placeholders par les variables sécurisées
-connection.query(query, [username, password], function(err, results) {
-   /* if (err) {
+/*connection.query(query, [username, password], function(err, results) {
+   if (err) {
         console.error('Erreur lors de l\'exécution de la requête: ' + err.stack);
         res.status(500).json({ message: 'Erreur lors de la connexion' });
         return;
