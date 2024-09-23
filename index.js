@@ -61,7 +61,7 @@ connection.query(query, function(err, results) {
 
     // Requête SQL pour vérifier les informations d'identification
 //const query = "SELECT * FROM credentials WHERE username = ? AND password = ?";
-
+//console.log(query);
 // Remplace les placeholders par les variables sécurisées
 /*connection.query(query, [username, password], function(err, results) {
    if (err) {
