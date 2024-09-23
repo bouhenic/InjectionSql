@@ -61,23 +61,24 @@ connection.query(query, function(err, results) {
 
     // Requête SQL pour vérifier les informations d'identification
 //const query = "SELECT * FROM credentials WHERE username = ? AND password = ?";
-//const filledQuery = query.replace("?", username).replace("?", password);
-//console.log(filledQuery); // Affiche la requête SQL avec les valeurs réelles des crédentials
-    /*connection.query(query, [username, password], function(err, results) {
-        if (err) {
-            console.error('Erreur lors de l\'exécution de la requête: ' + err.stack);
-            res.status(500).json({ message: 'Erreur lors de la connexion' });
-            return;
-        }
 
-        if (results.length > 0) {
-            // Authentification réussie
-            res.json({ message: 'Authentification réussie' });
-        } else {
-            // Informations d'identification invalides
-            res.status(401).json({ message: 'Informations d\'identification invalides' });
-        }
-    });*/
+// Remplace les placeholders par les variables sécurisées
+connection.query(query, [username, password], function(err, results) {
+   /* if (err) {
+        console.error('Erreur lors de l\'exécution de la requête: ' + err.stack);
+        res.status(500).json({ message: 'Erreur lors de la connexion' });
+        return;
+    }
+
+    if (results.length > 0) {
+        // Authentification réussie
+        res.json({ message: 'Authentification réussie' });
+    } else {
+        // Informations d'identification invalides
+        res.status(401).json({ message: 'Informations d\'identification invalides' });
+    }
+});*/
+
 });
 
 // Toutes les autres routes redirigent vers la page d'index.html
